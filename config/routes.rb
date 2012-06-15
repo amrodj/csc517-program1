@@ -1,4 +1,6 @@
 Csc517Program1::Application.routes.draw do
+  resources :final_dummies
+
   resources :dummies
 
   resources :users
