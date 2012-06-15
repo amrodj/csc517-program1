@@ -1,4 +1,6 @@
 Csc517Program1::Application.routes.draw do
+  resources :dummies
+
   resources :users
 
   # The priority is based upon order of creation:
