@@ -13,19 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20120615014228) do
 
-  create_table "dummies", :force => true do |t|
-    t.string   "name"
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "final_dummies", :force => true do |t|
-    t.text     "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
