@@ -1,0 +1,21 @@
+<%= form_for(@final_dummy) do |f| %>
+  <% if @final_dummy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@final_dummy.errors.count, "error") %> prohibited this final_dummy from being saved:</h2>
+
+      <ul>
+      <% @final_dummy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
