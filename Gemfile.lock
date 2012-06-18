@@ -56,6 +56,11 @@ GEM
     eventmachine (0.12.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (2.3.2)
+      activesupport
+    factory_girl_rails (1.4.0)
+      factory_girl (~> 2.3.0)
+      railties (>= 3.0.0)
     ffi (1.0.11)
     hike (1.2.1)
     i18n (0.6.0)
@@ -156,6 +161,7 @@ DEPENDENCIES
   bootstrap-sass (= 2.0.0)
   capybara
   coffee-rails (~> 3.2.1)
+  factory_girl_rails (= 1.4.0)
   jquery-rails
   pg
   rails (= 3.2.3)
