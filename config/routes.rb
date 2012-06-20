@@ -1,10 +1,18 @@
 Csc517Program1::Application.routes.draw do
+  get "static_pages/search"
+
+  resources :dummy_users
+
+  resources :dummy_posts
+
   get "users/new"
   root :to => 'static_pages#home'
   match '/signup', to: 'users#new'
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  match '/search', to: 'static_pages#search'
+  match '/dummy_posts', to: 'static_pages#dummy_posts'
   resources :posts
 
   resources :users

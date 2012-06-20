@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Post:</b>
+  <%= @dummy_post.post %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @dummy_post.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @dummy_post.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_dummy_post_path(@dummy_post) %> |
+<%= link_to 'Back', dummy_posts_path %>

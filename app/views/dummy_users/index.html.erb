@@ -1,0 +1,25 @@
+<h1>Listing dummy_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dummy_users.each do |dummy_user| %>
+  <tr>
+    <td><%= dummy_user.name %></td>
+    <td><%= dummy_user.email %></td>
+    <td><%= link_to 'Show', dummy_user %></td>
+    <td><%= link_to 'Edit', edit_dummy_user_path(dummy_user) %></td>
+    <td><%= link_to 'Destroy', dummy_user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dummy user', new_dummy_user_path %>

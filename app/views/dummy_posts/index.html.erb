@@ -1,0 +1,41 @@
+<h1>Listing dummy_posts</h1>
+
+<table>
+  <tr>
+    <th>Post</th>
+    <th>Content</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dummy_posts.each do |dummy_post| %>
+  <tr>
+    <td><%= dummy_post.post %></td>
+    <td><%= dummy_post.content %></td>
+    <td><%= dummy_post.user_id %></td>
+    <td><%= link_to 'Show', dummy_post %></td>
+    <td><%= link_to 'Edit', edit_dummy_post_path(dummy_post) %></td>
+    <td><%= link_to 'Destroy', dummy_post, confirm: 'Are you sure?', method: :delete %></td>
+
+  </tr>
+
+<% end %>
+
+
+  <tr>
+    <td>
+      <%= form_tag dummy_posts_path, :method => 'get' do %>
+          <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search", :name => nil %>
+          </p>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New Dummy post', new_dummy_post_path %>

@@ -8,7 +8,7 @@ gem 'bcrypt-ruby', '3.0.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :production do
-  gem 'thin'
+  #gem 'thin'
   gem 'pg'
 end
 
